@@ -42,24 +42,24 @@ $(document).ready(function(){ //When game loads;
         }
         
         if (document.querySelector('.charHov').id == 'c1') {
-            $('.imgD').eq('0').html(`<img class='imDimg' src='monsters/t1.png'/>`);
+            $('.imgD').eq('0').html(`<img class='imDimg' src='img/monsters/t1.png'/>`);
         } else if (document.querySelector('.charHov').id == 'c2') {
-            $('.imgD').eq('0').html(`<img class='imDimg' src='monsters/t2.png'/>`);
+            $('.imgD').eq('0').html(`<img class='imDimg' src='img/monsters/t2.png'/>`);
         } else if (document.querySelector('.charHov').id == 'c3') {
-            $('.imgD').eq('0').html(`<img class='imDimg' src='monsters/t3.png'/>`);
+            $('.imgD').eq('0').html(`<img class='imDimg' src='img/monsters/t3.png'/>`);
         } else {
-            $('.imgD').eq('0').html(`<img class='imDimg' src='monsters/t4.png'/>`);
+            $('.imgD').eq('0').html(`<img class='imDimg' src='img/monsters/t4.png'/>`);
         }
 
         botCharN = Math.floor(Math.random()*4+1) //Random # from 1 to 4;
         if (botCharN === 1) {
-            $('.imgD').eq('1').html(`<img class='imDimg' src='monsters/t1.png'/>`);
+            $('.imgD').eq('1').html(`<img class='imDimg' src='img/monsters/t1.png'/>`);
         } else if (botCharN === 2) {
-            $('.imgD').eq('1').html(`<img class='imDimg' src='monsters/t2.png'/>`);
+            $('.imgD').eq('1').html(`<img class='imDimg' src='img/monsters/t2.png'/>`);
         } else if (botCharN === 3) {
-            $('.imgD').eq('1').html(`<img class='imDimg' src='monsters/t3.png'/>`);
+            $('.imgD').eq('1').html(`<img class='imDimg' src='img/monsters/t3.png'/>`);
         } else {
-            $('.imgD').eq('1').html(`<img class='imDimg' src='monsters/t4.png'/>`);
+            $('.imgD').eq('1').html(`<img class='imDimg' src='img/monsters/t4.png'/>`);
         }
 
     });
@@ -89,7 +89,7 @@ function countDown(){
             $('.cardZ').html('');
             clearInterval(m);
             $('.card').css({
-                "background":"url('cardCover.png')",
+                "background":"url('img/cardCover.png')",
                 "background-size":"117px"
             });
             $('.mon').hide();
@@ -152,11 +152,11 @@ $('.card').on('click', function(e){ //When card is clicked (event listener);
             } else if (compare[0] !== compare[1]) { //If 2 matching not found.
                 setTimeout(()=>{ // Wait 1.5s.
                     $(firstNsecond[0]).css({ //Hide img.
-                        "background":"url('cardCover.png')",
+                        "background":"url('img/cardCover.png')",
                         "background-size":"117px"
                     }).children().css("display","none");; //Hide img of first clicked card.
                     $(firstNsecond[1]).css({  //Hide img.
-                        "background":"url('cardCover.png')",
+                        "background":"url('img/cardCover.png')",
                         "background-size":"117px"
                     }).children().css("display","none");
                     $(oi).children().css({"display":"none"}); //Hide img of second clicked card.
@@ -249,11 +249,11 @@ function etcTurn(){
                 if (clsChild !== cls2Child) { //If two selected img don't match.
                     setTimeout(()=>{ //Hide img + time delay.
                         $(cls).css({
-                            "background":"url('cardCover.png')",
+                            "background":"url('img/cardCover.png')",
                             "background-size":"117px"
                         }).children().css({"display":"none"});
                         $(cls2).css({ //Hide img + time delay.
-                            "background":"url('cardCover.png')",
+                            "background":"url('img/cardCover.png')",
                             "background-size":"117px"
                         }).children().css({"display":"none"});
                         $('#player').css("border","2px solid red"); //Player1 screen highlight on.
